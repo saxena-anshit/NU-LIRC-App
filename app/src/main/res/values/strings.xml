@@ -26,4 +26,5 @@
     <string name="age">Age</string>
     <string name="member">Already a member? Login</string>
     <string name="create_account">Create Account</string>
+    <string name="description">NU Logo</string>
 </resources>
