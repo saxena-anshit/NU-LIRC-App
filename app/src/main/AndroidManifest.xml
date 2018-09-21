@@ -16,11 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginPage"></activity>
+        <activity android:name=".LoginPage" />
         <activity
             android:name=".QuickLinks"
             android:label="@string/title_activity_quick_links"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SignUpPage"></activity>
     </application>
 
 </manifest>

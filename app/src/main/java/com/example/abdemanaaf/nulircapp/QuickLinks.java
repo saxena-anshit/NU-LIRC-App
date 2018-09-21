@@ -1,5 +1,6 @@
 package com.example.abdemanaaf.nulircapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -57,6 +58,11 @@ public class QuickLinks extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }
+
+        if (id == R.id.action_logout) {
+            Intent intent = new Intent(QuickLinks.this, LoginPage.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

@@ -1,33 +1,34 @@
 package com.example.abdemanaaf.nulircapp;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class LoginPage extends AppCompatActivity {
+public class SignUpPage extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_page);
+        setContentView(R.layout.activity_sign_up_page);
 
-        TextView signUp = findViewById(R.id.sign_up);
-        Button login = findViewById(R.id.loginButton);
+        TextView linkLogin = findViewById(R.id.link_login);
+        Button createButton = findViewById(R.id.createButton);
 
-        signUp.setOnClickListener(new View.OnClickListener() {
+        linkLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginPage.this, SignUpPage.class);
+                Intent intent = new Intent(SignUpPage.this, LoginPage.class);
                 startActivity(intent);
             }
         });
 
-        login.setOnClickListener(new View.OnClickListener() {
+        createButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginPage.this, QuickLinks.class);
+                Intent intent = new Intent(SignUpPage.this, QuickLinks.class);
                 startActivity(intent);
             }
         });
