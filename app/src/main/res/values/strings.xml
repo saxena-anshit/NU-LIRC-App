@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">NU LIRC App</string>
+    <string name="username">USERNAME</string>
+    <string name="colon"> : </string>
+    <string name="clickToContinue">Click to Continue</string>
+    <string name="login">Login</string>
+    <string name="password">PASSWORD</string>
+    <string name="cancel">Cancel</string>
+    <string name="links">Quick Links</string>
 </resources>
