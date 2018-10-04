@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "282737889138",
+    "firebase_url": "https://nu-lirc-app.firebaseio.com",
+    "project_id": "nu-lirc-app",
+    "storage_bucket": "nu-lirc-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:282737889138:android:f5415ec45f40acb9",
+        "android_client_info": {
+          "package_name": "com.example.abdemanaaf.nulircapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "282737889138-6i4cpo7nr9vqlvj3u1u7s6d1qef74uqd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.abdemanaaf.nulircapp",
+            "certificate_hash": "1bb5d15113c078a7164c446ae24ce466fc4a758a"
+          }
+        },
+        {
+          "client_id": "282737889138-0kjielqokiak5elmj7eut62b2ersj5i3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3ou_-hWGB8pkxmX2vpPQd0D_QtvkBa-c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "282737889138-0kjielqokiak5elmj7eut62b2ersj5i3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
