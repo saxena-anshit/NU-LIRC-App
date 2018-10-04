@@ -22,7 +22,7 @@
             android:textSize="36sp" />
 
         <EditText
-            android:id="@+id/name"
+            android:id="@+id/name_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -32,7 +32,7 @@
 
 
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/username_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -41,7 +41,7 @@
             android:inputType="text" />
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/password_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"

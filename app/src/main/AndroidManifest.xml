@@ -24,7 +24,7 @@
             android:name=".QuickLinks"
             android:label="@string/title_activity_quick_links"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SignUpPage"></activity>
+        <activity android:name=".SignUpPage"/>
     </application>
 
 </manifest>
