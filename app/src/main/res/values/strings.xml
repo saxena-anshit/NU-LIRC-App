@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">NU LIRC App</string>
-    <string name="username">Username</string>
+    <string name="email">Email</string>
     <string name="colon"> : </string>
     <string name="clickToContinue">Click to Continue</string>
     <string name="login">Login</string>
     <string name="password">Password</string>
     <string name="cancel">Cancel</string>
+    <string name="enrollment">Enrollment Number</string>
+    <string name="show_password">Show Password</string>
 
     <string name="links">Quick Links</string>
     <string name="title_activity_quick_links">QuickLinks</string>

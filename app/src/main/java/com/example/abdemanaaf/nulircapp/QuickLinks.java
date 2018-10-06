@@ -41,7 +41,7 @@ public class QuickLinks extends AppCompatActivity implements NavigationView.OnNa
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
 
                 if (firebaseAuth.getCurrentUser() == null) {
-                    Intent signUpIntent = new Intent(QuickLinks.this, SignUpPage.class);
+                    Intent signUpIntent = new Intent(QuickLinks.this, LoginPage.class);
                     signUpIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(signUpIntent);
                 }
