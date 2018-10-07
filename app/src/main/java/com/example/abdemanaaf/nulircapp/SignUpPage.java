@@ -103,11 +103,14 @@ public class SignUpPage extends AppCompatActivity {
         final String enrollment = mEnrollment.getText().toString().trim();
         final String age = mAge.getText().toString().trim();
 
+        String user_id = mAuth.getCurrentUser().getUid();
+
         if (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(enrollment)
                 && !TextUtils.isEmpty(age)) {
 
-            DatabaseReference currentUser = mDatabase.child(enrollment);
+            DatabaseReference currentUser = mDatabase.child(user_id);
             currentUser.child("name").setValue(name);
+            currentUser.child("enrollment").setValue(enrollment);
             currentUser.child("email").setValue(email);
             currentUser.child("age").setValue(age);
 
