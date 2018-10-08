@@ -22,87 +22,49 @@
             android:textSize="36sp" />
 
         <EditText
-            android:id="@+id/name"
+            android:id="@+id/name_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
             android:layout_marginTop="46dp"
+            android:layout_marginBottom="8dp"
             android:hint="@string/name"
             android:inputType="text" />
 
-
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/enrollment_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:hint="@string/username"
+            android:layout_marginBottom="8dp"
+            android:hint="@string/enrollment"
+            android:inputType="text"
+            android:textAllCaps="true" />
+
+        <EditText
+            android:id="@+id/username_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:hint="@string/email"
             android:inputType="text" />
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/password_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:hint="@string/password"
             android:inputType="textPassword" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/gender"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/gender"
-                android:textSize="20sp"
-                android:layout_marginLeft="14dp"
-                android:layout_marginStart="14dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/colon"
-                android:layout_marginRight="32dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp" />
-
-            <RadioGroup
-                android:id="@+id/gender_radio_group"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/male_radio_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/male"
-                    android:checked="true" />
-
-                <RadioButton
-                    android:id="@+id/female_radio_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text = "@string/female" />
-
-            </RadioGroup>
-
-        </LinearLayout>
 
         <EditText
             android:id="@+id/age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:hint="@string/age"
             android:inputType="number" />
 
@@ -111,17 +73,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:text="@string/create_account" />
 
-        <TextView android:id="@+id/link_login"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="@string/member"
-            android:gravity="center"
-            android:textSize="16sp"/>
 
     </LinearLayout>
 

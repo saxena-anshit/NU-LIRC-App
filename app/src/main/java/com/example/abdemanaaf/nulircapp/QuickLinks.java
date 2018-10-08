@@ -11,9 +11,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
-public class QuickLinks extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+public class QuickLinks extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+    private DatabaseReference mDatabase;
+
+    private static final String TAG = MainActivity.class.getSimpleName();
+
+    private TextView mEmailNav;
+    private String userId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +34,9 @@ public class QuickLinks extends AppCompatActivity
         setContentView(R.layout.activity_quick_links);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        mEmailNav = findViewById(R.id.nav_email);
+        mDatabase = FirebaseDatabase.getInstance().getReference("Users");
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -30,6 +46,29 @@ public class QuickLinks extends AppCompatActivity
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        mAuth = FirebaseAuth.getInstance();
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+
+                if (firebaseAuth.getCurrentUser() == null) {
+                    Intent signUpIntent = new Intent(QuickLinks.this, LoginPage.class);
+                    signUpIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(signUpIntent);
+                }
+
+            }
+        };
+
+        userId = mAuth.getCurrentUser().getUid();
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
     }
 
     @Override
@@ -44,27 +83,19 @@ public class QuickLinks extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.quick_links, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        if (id == R.id.action_settings)
+            startActivity(new Intent(QuickLinks.this, SettingsActivity.class));
 
-        if (id == R.id.action_logout) {
-            Intent intent = new Intent(QuickLinks.this, LoginPage.class);
-            startActivity(intent);
-        }
+        if (id == R.id.action_logout)
+            mAuth.signOut();
 
         return super.onOptionsItemSelected(item);
     }
@@ -75,18 +106,8 @@ public class QuickLinks extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_glance) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
